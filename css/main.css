@@ -3,6 +3,7 @@ nav ul {
   flex-direction: row;
   background-color: #64A9D2;
   border-radius: 13px;
+  margin: 43px 30px 0 30px;
 }
 
 nav ul li {
@@ -14,7 +15,12 @@ nav ul li {
   border-right: solid 1px;
   padding: 17px 0 0 0;
   font-size: 14px;
+  width: 15%;
 }
+
+/* li.submenu, li.longmenu {
+    padding: 1px 0 0 0;
+} */
 
 nav ul li:hover {
   background-color: #93D7FF;
@@ -28,24 +34,54 @@ nav ul li:last-child:hover {
   border-radius: 0 13px 13px 0;
 }
 
+li.submenu:hover div div {
+    display: block;
+}
+
+li.longmenu:hover div div {
+    display: block;
+}
+
+.submenu-dropdown, .longmenu-dropdown {
+  background-color: #64A9D2;
+  padding: 61px 5px 13px 0px;
+  margin: -33px 0 0 0;
+  border-radius: 0 0 11px 11px;
+  display: none;
+}
+
+.submenu:hover .longmenu:hover .submenu-dropdown .longmenu-dropdown {
+    background-color: #93D7FF;
+    display: flex;
+}
+
+
+
 /***************************************/
 
 /* TABLET */
 
 /***************************************/
 
-@media (max-width: 550px) {
+@media (max-width: 1200px) {
 
   nav ul {
-    margin: 43px 30px 0 30px;
+    margin: 43px 13% 0 13%;
   }
-  
+
   .menu {
     display: none;
   }
 
   nav ul li {
     width: 57%;
+  }
+
+  .submenu {
+    display: none;
+  }
+  .longmenu {
+    display: none;
   }
 }
 
@@ -61,6 +97,10 @@ nav ul li:last-child:hover {
     margin: 0;
     border-radius: 0;
   } 
+  nav ul li {
+    border-bottom: solid 1px; 
+    width: 100%;
+  }
 
   nav ul li:first-child:hover {
     border-radius: 0;
@@ -70,10 +110,10 @@ nav ul li:last-child:hover {
     border-radius: 0;
   }
 
-  .menu {
+  .submenu {
     display: none;
   }
-  nav ul li {
-    width: 100%;
+  .longmenu {
+    display: none;
   }
 }
