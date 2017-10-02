@@ -174,7 +174,7 @@ nav ul .follows {
 /* MOBILE */
 
 /***************************************/
-@media (max-width: 600px) {
+@media (max-width: 500px) {
 
   main {
     padding: 0;
