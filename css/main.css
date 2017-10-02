@@ -1,6 +1,6 @@
 /***************************************/
 
-/* DEFAULT */
+/* MAIN */
 
 /***************************************/
 
@@ -15,6 +15,12 @@ main {
   border-radius: 25px;
   background-color: white;
 }
+
+/***************************************/
+
+/* NAVIGATION */
+
+/***************************************/
 
 nav ul {
   display: flex;
@@ -33,7 +39,8 @@ nav ul li {
   border-right: solid 1px;
   padding: 17px 0 0 0;
   font-size: 14px;
-  width: 15%;
+  width: 100%;
+  white-space: nowrap;
 }
 
 nav ul li:hover {
@@ -52,29 +59,11 @@ nav ul li:last-child:hover {
   border-radius: 0 13px 13px 0;
 }
 
-.submenu-dropdown, .longmenu-dropdown {
-  background-color: #64A9D2;
-  padding: 61px 5px 13px 0px;
-  margin: -33px 0 0 0;
-  border-radius: 0 0 11px 11px;
-  display: none;
-}
+/***************************************/
 
-.submenu-dropdown p, .longmenu-dropdown p {
-    padding: 7px;
-}
+/* FOLLOWERS */
 
- /* display dropdown menu on hover */
-
-li.submenu:hover div div {
-    display: block;
-}
-
-li.longmenu:hover div div {
-    display: block;
-}
-
-/* follows */
+/***************************************/
 
 nav ul .follows {
   background-color: #8BD445;
@@ -91,6 +80,54 @@ nav ul .follows {
 
 .follows-container {
   position: relative;
+  z-index: 5;
+}
+
+/***************************************/
+
+/* DROPDOWN MENUS */
+
+/***************************************/
+
+.submenu, .longmenu {
+  position: relative;
+}
+
+.submenu:hover .submenu-dropdown, .longmenu:hover .longmenu-dropdown {
+  display: block;
+}
+
+.submenu-dropdown, .longmenu-dropdown {
+  position: absolute;
+  background-color: #64A9D2;
+  border-radius: 0 0 11px 11px;
+  width: 114%;
+  white-space: nowrap;
+  top: 48px;
+  right: 0px;
+  display: none;
+}
+
+.longmenu-dropdown {
+  top: 31px;
+}
+
+.submenu-dropdown:last-child, .longmenu-dropdown:last-child {
+  border-radius: 0 0 11px 11px;
+}
+
+.submenu-dropdown p, .longmenu-dropdown p {
+  padding: 15px 0px 16px 0px;
+  margin: 0px 0 0 0px;
+}
+
+.submenu-dropdown p:hover, .longmenu-dropdown p:hover {
+  background-color: #93D7FF;
+  position: relative;
+}
+
+.last-item:hover {
+  border-radius: 0 0 11px 11px;
 }
 
 /***************************************/
@@ -99,7 +136,7 @@ nav ul .follows {
 
 /***************************************/
 
-@media (max-width: 1200px) {
+@media (max-width: 1215px) {
 
   nav ul {
     margin: 43px 13% 0 13%;
@@ -120,7 +157,7 @@ nav ul .follows {
   .longmenu {
     display: none;
   }
-    nav ul .follows {
+  nav ul .follows {
     background-color: #8BD445;
     height: 16px;
     width: 16px;
@@ -129,7 +166,7 @@ nav ul .follows {
     font-family: Helvetica, sans-serif;
     font-size: 14px;
     padding: 5px 5px 5px 6px;
-    }
+  }
 }
 
 /***************************************/
@@ -138,6 +175,7 @@ nav ul .follows {
 
 /***************************************/
 @media (max-width: 600px) {
+
   main {
     padding: 0;
   }
@@ -163,13 +201,6 @@ nav ul .follows {
 
   nav ul li:last-child:hover {
     border-radius: 0;
-  }
-
-  .submenu {
-    display: none;
-  }
-  .longmenu {
-    display: none;
   }
 
   nav ul .follows {
