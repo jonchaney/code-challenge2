@@ -1,3 +1,9 @@
+/***************************************/
+
+/* DEFAULT */
+
+/***************************************/
+
 nav ul {
   display: flex;
   flex-direction: row;
@@ -18,10 +24,6 @@ nav ul li {
   width: 15%;
 }
 
-/* li.submenu, li.longmenu {
-    padding: 1px 0 0 0;
-} */
-
 nav ul li:hover {
   background-color: #93D7FF;
 }
@@ -34,14 +36,6 @@ nav ul li:last-child:hover {
   border-radius: 0 13px 13px 0;
 }
 
-li.submenu:hover div div {
-    display: block;
-}
-
-li.longmenu:hover div div {
-    display: block;
-}
-
 .submenu-dropdown, .longmenu-dropdown {
   background-color: #64A9D2;
   padding: 61px 5px 13px 0px;
@@ -50,12 +44,34 @@ li.longmenu:hover div div {
   display: none;
 }
 
-.submenu:hover .longmenu:hover .submenu-dropdown .longmenu-dropdown {
-    background-color: #93D7FF;
-    display: flex;
+ /* display dropdown menu on hover */
+
+li.submenu:hover div div {
+    display: block;
 }
 
+li.longmenu:hover div div {
+    display: block;
+}
 
+/* follows */
+
+nav ul .follows {
+  background-color: #8BD445;
+  height: 16px;
+  border-radius: 25px;
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 5px 5px 5px 6px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.follows-container {
+  position: relative;
+}
 
 /***************************************/
 
@@ -83,6 +99,16 @@ li.longmenu:hover div div {
   .longmenu {
     display: none;
   }
+    nav ul .follows {
+    background-color: #8BD445;
+    height: 16px;
+    width: 16px;
+    border-radius: 25px;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 5px 5px 5px 6px;
+    }
 }
 
 /***************************************/
@@ -116,4 +142,18 @@ li.longmenu:hover div div {
   .longmenu {
     display: none;
   }
+
+  nav ul .follows {
+    background-color: #8BD445;
+    height: 16px;
+    width: 16px;
+    border-radius: 25px;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 5px 5px 5px 6px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    }
 }
